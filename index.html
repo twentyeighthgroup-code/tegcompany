@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tegcompany | Современные решения</title>
+    <title>Tegcompany | Changing the world for the better</title>
     <style>
         * {
             margin: 0;
@@ -14,24 +14,33 @@
         body {
             font-family: 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #222; /* тёмно-серый, ближе к чёрному */
+            background-color: #f9fafb; /* очень светлый фон для контраста */
         }
 
         header {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
+            background: linear-gradient(135deg, #c7f9cc 0%, #cfeaf3 100%); /* градиент как в логотипе */
+            color: #1a1a1a; /* почти чёрный, но мягче */
             padding: 2rem 1rem;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
         }
 
         nav {
-            background-color: #2c3e50;
+            background-color: #ffffff;
             padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         nav ul {
@@ -42,14 +51,18 @@
         }
 
         nav a {
-            color: white;
+            color: #2c3e50;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.2s;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
         }
 
         nav a:hover {
-            color: #3498db;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #c7f9cc 0%, #cfeaf3 100%);
+            transform: translateY(-2px);
         }
 
         main {
@@ -67,20 +80,46 @@
             color: #2c3e50;
             margin-bottom: 1.5rem;
             text-align: center;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #c7f9cc 0%, #cfeaf3 100%);
+            margin-top: 1rem;
+            border-radius: 2px;
         }
 
         .about-text {
-            background-color: #f8f9fa;
+            background-color: #ffffff;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
         }
 
         footer {
-            background-color: #2c3e50;
-            color: white;
+            background: linear-gradient(135deg, #c7f9cc 0%, #cfeaf3 100%);
+            color: #1a1a1a;
             text-align: center;
             padding: 2rem;
+            margin-top: 3rem;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -108,7 +147,10 @@
 
         <section id="contact">
             <h2>Контакты</h2>
-            <p>Свяжитесь с нами по адресу: twentyeighthgroup@gmail.com</p>
+            <div class="about-text">
+                <p>Свяжитесь с нами по адресу: <strong>twentyeighthgroup@gmail.com</strong></p>
+                <p>Мы всегда рады новым проектам и партнёрствам.</p>
+            </div>
         </section>
     </main>
 
